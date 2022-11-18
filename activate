@@ -1,2 +1,3 @@
 #!/bin/bash
-source .venv/python-3.10.6/bin/activate
+activate=$(find . -wholename "*/bin/activate")
+source $activate
