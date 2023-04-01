@@ -1,18 +1,20 @@
 use ndarray::prelude::*;
+use std::fmt::*;
+
+#[derive(Debug)]
+struct Point {
+    x: i32,
+    y: i32
+}
+
+impl Display for Point {
+    fn fmt(&self, f: &mut Formatter) -> Result {
+        write!(f, "({}, {})", self.x, self.y)
+    }
+}
 
 fn main() {
 
-    let mut x = Array1::<f32>::zeros(10);
-
-    for i in 0..x.len() {
-        x[i] = i as f32;
-    }
-
-    println!("{x}");
-
-    let x = array![[1.0f32, 2.], [3., 4.]];
-
-    x.rows().into_iter().for_each(|row| {
-        println!("{:?}", row);
-    });
+    let point = Point{x:1, y:2};
+    println!("{:?}", point);
 }

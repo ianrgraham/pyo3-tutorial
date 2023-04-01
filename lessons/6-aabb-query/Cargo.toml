@@ -1,15 +1,17 @@
 [package]
-name = "science-calc"
+name = "aabb-query"
 version = "0.1.0"
 edition = "2021"
 
 [lib]
-name = "science_calc"
+name = "aabb_query"
 crate-type = ["cdylib"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+nalgebra = "0.32"
+ordered-float = "3.6"
 ndarray = { version = "0.15", features = ["rayon"] }
 ndarray-linalg = "0.16"
 numpy = "0.18"
