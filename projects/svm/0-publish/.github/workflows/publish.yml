@@ -1,0 +1,13 @@
+name: publish
+
+on:
+  push
+
+jobs:
+  linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: PyO3/maturin-action@v1
+        with:
+          command: build
+          manylinux: 

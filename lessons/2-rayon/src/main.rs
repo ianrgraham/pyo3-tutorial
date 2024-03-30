@@ -8,7 +8,7 @@ fn main() {
 
     println!("{out}");
 
-    let mut a = Array1::<f32>::zeros(100);
+    let mut a = Array1::<f32>::zeros(100000);
 
     a.par_iter_mut().for_each(|x| *x = 1.0);
 
